@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+    <img alt="看不清楚，单击换一张试试"
+        src="/10-verification-code/verification-code"
+        onclick="changeImg(this)" />
+
+</body>
+<script>
+	function changeImg(obj) {
+		obj.src = "/10-verification-code/verification-code?t" + Math.random();
+	}
+</script>
+
+</html>

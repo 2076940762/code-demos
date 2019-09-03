@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>16-listener-filter</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<listener>
+		<listener-class>listener.HelloServletContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener.HelloServletRequestListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener.HelloHttpSessionListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listener.attr.ServletContextAttributeListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>domain.Student</listener-class>
+	</listener>
+	<servlet>
+		<description></description>
+		<display-name>Hello</display-name>
+		<servlet-name>Hello</servlet-name>
+		<servlet-class>filter.servlet.Hello</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Hello</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>hello</filter-name>
+		<filter-class>filter.servlet.Hello</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>hello</filter-name>
+		<url-pattern>/hello</url-pattern>
+	</filter-mapping>
+
+</web-app>

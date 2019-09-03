@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+	选择器:★
+		id选择器
+			要求:
+				html元素必须有id属性且有值   <xxx id="id1"></xxx>
+				css中通过"#"引入,后面加上id的值  #id1{...}
+		class选择器
+			要求:
+				html元素必须有class属性且有值 <xxx class="cls1"/>
+				css中通过"."引入,后面加上class的值  .cls1{...}
+		元素选择器
+			直接用元素(标签)名即可   xxx{...}
+		
+	派生的选择器
+		属性选择器★
+			要求:
+				html元素必须有一个属性不论属性是什么且有值  <xxx nihao="wohenhao"/>
+				css中通过下面的方式使用
+					元素名[属性="属性值"]{....}
+					例如:
+						xxx[nihao="wohenhao"]{....}
+		后代选择器
+			选择器 后代选择器{...}   在满足第一个选择器的条件下找后代的选择器,给满足条件的元素添加样式
+	了解的选择器
+		锚伪类选择器
+			a:link {color: #FF0000}	/* 未访问的链接 */
+			a:visited {color: #00FF00}	/* 已访问的链接 */
+			a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
+			a:active {color: #0000FF}	/* 选定的链接 */
+
+	
+	选择器使用小结:
+		id选择器:一个元素(标签)
+		class选择器:一类元素 
+		元素选择器:一种元素
+		属性选择器:元素选择器的特殊用法
+	使用的时候注意:(了解)
+		若多个样式作用于一个元素的时候
+			不同的样式,会叠加
+			相同的样式,最近原则
+		若多个选择器作用于一个元素的时候
+			越特殊优先级越高 id优先级最高
+ -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		/*<!-- id选择器-->*/
+		#div-id-a001 {
+			background-color: #FFFF00;
+		}
+        
+		/*		<!-- 类选择器-->*/		
+		.div-class-a002 {
+			background-color: #00FFBB;
+		}
+		
+        /* 元素选择器 */
+		span {
+			border-color: black;
+			border-bottom-style: dotted;
+			border-left: double;
+			border-right: solid;
+			border-top-color: red;
+			border-top:dotted;
+		}
+		
+        
+		span[attr="a1234"] {
+			background-color: #5599ff;
+		}
+        
+        
+		/*<!-- 元素选择器-->*/		
+		span {
+			background-color: #88FF55;
+		}
+		
+		span {
+			font-family: 隶书;
+		}
+		
+		span {
+			font-size: x-large;
+		}
+        
+		/*<!-- 属性选择器-->*/
+		
+		div[attr="a1234"] {
+			background-color: #5599ff;
+		}
+	</style>
+
+	<body>
+		<!--id选择器-->
+		<div id="div-id-a001">
+			谁念西风独自凉 萧萧黄叶闭疏窗 沉思往事立残阳 被酒莫惊春睡重 赌书消得泼茶香 当时只道是寻常
+		</div>
+
+		<!--类选择器-->
+		<div class="div-class-a002">
+			山一程，水一程， 身向榆关那畔行， 夜深千帐灯。 
+		</div >
+        <div class="div-class-a002">
+            风一更，雪一更， 聒碎乡心梦不成， 故园无此声。
+        </div>
+
+		<!--  元素选择器      -->
+		<br/>
+		<span>
+			浣溪沙
+		</span>
+
+		<span>
+			[清] 纳兰性德<br />
+		</span>
+
+		<span>
+			杨柳千条送马蹄，
+		</span>
+
+		<span>
+			北来征雁旧南飞，
+		</span>
+
+		<span>
+			客中谁与换春衣。
+		</span>
+        
+        
+
+		<!--属性选择器-->
+		<div attr="a1234">
+			终古闲情归落照， 一春幽梦逐游丝， 信回刚道别多时。
+		</div>
+
+		<span attr="a1234">
+	选择器使用小结: </br>
+		</span>
+        
+		<span>
+		id选择器:一个元素(标签)<br />
+		class选择器:一类元素 <br />
+		元素选择器:一种元素<br />
+		属性选择器:元素选择器的特殊用法<br />
+	使用的时候注意:(了解)<br />
+		若多个样式作用于一个元素的时候<br />
+			不同的样式,会叠加<br />
+			相同的样式,最近原则<br />
+		若多个选择器作用于一个元素的时候<br />
+			越特殊优先级越高 <br />
+			id优先级最高<br />
+		</span>
+	</body>
+
+</html>

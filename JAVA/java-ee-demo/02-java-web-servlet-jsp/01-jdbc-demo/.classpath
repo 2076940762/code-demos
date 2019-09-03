@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.39-bin.jar" sourcepath="E:/2017黑马JAVA视频/就业班+Hadoop大数据/【阶段01】Javaweb/【阶段01】Javaweb1/day07-jdbc/resource/jar/驱动/mysql-connector-java-5.1.39/src"/>
+	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar" sourcepath="E:/2017黑马JAVA视频/就业班+Hadoop大数据/【阶段01】Javaweb/【阶段01】Javaweb1/day07-jdbc/resource/jar/dbcp/commons-pool-1.5.6-bin/commons-pool-1.5.6/commons-pool-1.5.6-sources.jar"/>
+	<classpathentry kind="lib" path="lib/commons-pool-1.5.6.jar"/>
+	<classpathentry kind="lib" path="lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbutils-1.4.jar" sourcepath="E:/2017黑马JAVA视频/就业班+Hadoop大数据/【阶段01】Javaweb/【阶段01】Javaweb1/day07-jdbc/resource/jar/commons-dbutils-1.4/commons-dbutils-1.4-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

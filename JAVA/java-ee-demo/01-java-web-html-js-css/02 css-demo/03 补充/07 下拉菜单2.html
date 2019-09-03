@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>下拉菜单实例|菜鸟教程(runoob.com)</title>
+        <meta charset="utf-8">
+        <style>
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            CSS 部分：
+            .dropdown 类使用 position:relative, 这将设置下拉菜单的内容放置在下拉按钮 (使用 position:absolute) 的右下角位置。
+            .dropdown-content 类中是实际的下拉菜单。默认是隐藏的，在鼠标移动到指定元素后会显示。 注意 min-width 的值设置为 160px。你可以随意修改它。 注意:
+            如果你想设置下拉内容与下拉按钮的宽度一致，可设置 width 为 100% ( overflow:auto 设置可以在小尺寸屏幕上滚动)。
+            我们使用 box-shadow 属性让下拉菜单看起来像一个"卡片"。
+            :hover 选择器用于在用户将鼠标移动到下拉按钮上时显示下拉菜单。
+        </p>
+        <hr />
+
+        <h2>下拉内容的对齐方式</h2>
+        <p>left 和 right 属性指定了下拉内容是从左到右或从右到左。</p>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn">左</button>
+            <div class="dropdown-content" style="left:0;">
+                <a href="#">菜鸟教程 1</a>
+                <a href="#">菜鸟教程 2</a>
+                <a href="#">菜鸟教程 3</a>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn">右</button>
+            <div class="dropdown-content">
+                <a href="#">菜鸟教程 1</a>
+                <a href="#">菜鸟教程 2</a>
+                <a href="#">菜鸟教程 3</a>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<img alt="验证码"
+		src="http://localhost:8080/04-http-request-response/verification-code"
+		title="换一张" onclick=changeImg(this)>
+
+</body>
+<script type="text/javascript">
+function changeImg(obj){
+	obj.src="http://localhost:8080/04-http-request-response/verification-code?i"+Math.random();
+}
+</script>
+</html>

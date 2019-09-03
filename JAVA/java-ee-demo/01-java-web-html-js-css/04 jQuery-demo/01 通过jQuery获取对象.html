@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script>
+            onload=function () {
+            //1 js方式获取对象
+            var usrObj =window.document.getElementById("username");
+            alert("js:"+usrObj.value);
+            }
+        </script>
+        <script src="js/jquery-1.11.0.min.js"></script>
+    </head>
+        <!-- 
+         jquery和html的整合
+        jquery是单独的js文件
+            通过script标签的src属性导入即可
+    获取一个jquery对象
+        $("选择器")  或者 jQuery("选择器")
+    dom对象和jquery对象之间的转换
+        dom对象===>jquery对象	
+            $(dom对象)
+        jquery对象===>dom对象
+            方式1:
+                jquery对象[index]
+            方式2:
+                jquery对象.get(index)
+    页面加载:
+        js:
+            window.onload=function(){}//在一个页面中只能使用一次
+        jquery 在一个页面中可以使用多次
+            方式1:
+                $(function(){...})
+            方式2:
+                $(document).ready(function(){});
+         -->
+    <body>
+        <input type="text" id="username" value="jack" />
+    </body>
+    <script>
+        //2
+        var $UsrName = $("#username");
+        //var $UsrName = jQuery("#username");
+        alert("jquery:" + $UsrName.val());
+        
+        //jQuery对象转dom对象
+        alert("jQuery对象转dom对象:"+$UsrName[0].value);
+        // alert("jQuery对象转dom对象:"+$UsrName.get(0).value);
+    </script>
+    
+</html>

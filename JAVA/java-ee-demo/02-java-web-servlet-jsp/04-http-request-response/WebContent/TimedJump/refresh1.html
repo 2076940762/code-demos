@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<!--http-equiv:响应头 	content:响应头的内容-->
+<meta http-equiv="refresh"
+	content="5;url=http://localhost:8080/04-http-request-response/TimedJump/refresh2.html" />
+<title>Insert title here</title>
+</head>
+<body>
+	<span id="span-01">5</span>秒后自动跳转
+</body>
+<script type="text/javascript">
+	window.onload = function() {
+		setInterval(showSeconds, 1000);
+	};
+
+	var i = 5;
+
+	function showSeconds() {
+		// 1获取元素
+		var obj = window.document.getElementById("span-01");
+
+		obj.innerHTML = i--;
+	}
+</script>
+</html>

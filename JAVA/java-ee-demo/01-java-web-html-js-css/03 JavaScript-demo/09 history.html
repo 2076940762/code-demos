@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    
+    <script>
+        function openbaidu() {
+			location.href = "https://www.baidu.com/"
+		}
+
+		function openbing() {
+			location.href = "https://cn.bing.com/";
+		}
+
+		function goback() {
+			history.back()
+		}
+
+		function goforword() {
+			history.forward()
+		}
+	</script>
+    <body onload=" return onopenhtml()">
+        <input type="button" value="baidu" onclick="openbaidu()" />
+
+        <input type="button" value="bing" onclick="openbing()" />
+
+        <input type="button" value="back" onclick="goback()" />
+
+        <input type="button" value="forword" onclick="goforword()" />
+    </body>
+</html>

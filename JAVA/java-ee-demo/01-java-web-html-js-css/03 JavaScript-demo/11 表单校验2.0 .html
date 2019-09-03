@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title表单校验</title> <!-- css调整格式 -->
+            <style>
+
+                #rootdiv{
+                width: 100%;
+            }
+            
+            form{
+               text-align: center; 
+               vertical-align:middle;
+               width: 70%;
+               display: table;
+               background-color: aquamarine;
+               height: 550px;
+               padding-top: 50px;
+               padding-bottom: 30px;
+            }
+            
+            .line {
+                height: 60px;
+                text-align: center;
+                vertical-align: middle;
+                display: table-row;
+            }
+            
+            .line input{
+                line-height: 35px;
+                width: 80%;
+                vertical-align: middle;
+                display: table-cell;
+            }
+            
+            .left {
+                font-family: "楷体";
+                font-size: x-large;
+                /* text-align: right; */
+                text-align: end;
+                vertical-align: middle;
+                display: table-cell;
+                width: 15%;
+            }
+            
+            .right {
+                width: 45%;
+                text-align: center;
+                vertical-align: middle;
+                display: table-cell;
+                padding: 0px;
+                margin:0px ;
+            }
+            
+            .right input{
+                width: 50px;
+                height: 20px;
+                vertical-align: middle;
+                text-align: center;
+                line-height: 60px;
+                padding-top: 10px;
+            }
+            
+            .alert_msg {
+                width: 15%;
+                text-align: center;
+                vertical-align: middle;
+                display: table-cell;
+                color: red;
+                font-size: larger;
+            }
+            
+            #foot {
+                text-align: center;
+                vertical-align: middle;
+                line-height: 40px;
+            }
+            
+            #foot input{
+                text-align: center;
+                vertical-align: middle;
+                height: 38px;
+            }
+        </style>
+
+            <!-- js表单校验 -->
+            <script>
+                // 1.校验用户名
+                var checkUsrName=function(){
+                var usrnameObj=document.getElementById("usrname");
+                if(usrnameObj.value==null || usrnameObj.value==""){
+                    // alert("用户名不能为空");
+                    window.document.getElementById("usrname_alert").innerHTML="用户名不能为空";
+                }
+                else{
+                    document.getElementById("usrname_alert").innerHTML="";
+                }
+            }
+            
+            // 2.校验密码
+            function checkPass(){
+                //
+                var pass =document.getElementById("pass_id");
+                var war=document.getElementById("pass_id_alert");
+                if(pass.value==null||pass.value=="")
+                {
+                    war.innerHTML="密码不能为空";
+                }
+                else{
+                    war.innerHTML="";
+                }
+            }
+            
+        </script>
+
+    </head>
+    
+    <body>
+        <div id="rootdiv" align="center">
+            <form>
+                <!-- 1.用户名 -->
+                <div class="line">
+                    <span class="left">用户名：</span>
+                    <input type="text" name="userName" class="right" id="usrname" onblur="checkUsrName()" />
+                    <span id="usrname_alert" class="alert_msg"></span>
+                </div>
+
+                <!--密码  -->
+                <div class="line">
+                    <span class="left">
+                        密码：
+                    </span>
+                    <input type="password" class="right" id="pass_id" onblur="checkPass()" />
+                    <span id="pass_id_alert" class="alert_msg"></span>
+                </div>
+
+                <!-- 确认密码 -->
+                <div class="line">
+                    <span class="left">
+                        确认密码：
+                    </span>
+                    <input type="password" class="right" />
+                    <span id="usrname_alert" class="alert_msg"></span>
+                </div>
+
+                <!-- <span id="usrname_alert" class="alert_msg"></span> -->
+
+                <!-- 性别 -->
+                <div class="line">
+                    <span class="left">性别:</span>
+                    <div class="right" align="center">
+                        <input type="radio" value="男" name="gender" checked="checked"/>男
+                        <input type="radio" value="女" name="gender" /> 女
+                    </div>
+                    <span id="usrname_alert" class="alert_msg"></span>
+                </div>
+
+                <!-- 邮箱 -->
+                <div class="line">
+                    <span class="left">Email:</span>
+                    <input type="email" class="right" />
+                    <span id="usrname_alert" class="alert_msg"></span>
+                </div>
+
+                <!-- 出生日期 -->
+                <div class="line">
+                    <span class="left">出生日期：</span>
+                    <input type="date" class="right" />
+                    <span id="usrname_alert" class="alert_msg"></span>
+                </div>
+
+                <!-- 验证码 -->
+                <div class="line">
+                    <span class="left">验证码：</span>
+                    <input type="text" class="right" />
+                    <span id="usrname_alert" class="alert_msg"></span>
+                </div>
+
+                <div id="foot" class="line">
+                    <span class="left"></span>
+                    <input type="submit" />
+                </div>
+                
+            </form>
+            
+        </div>
+        
+    </body>
+    
+</html>

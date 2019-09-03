@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- 步骤分析:
+    1.常见一个8行1列的表格
+    2.在第一行 放logo
+        嵌套一个1行3列的表格
+    3.第2行 放菜单
+    4.第3行 放图片
+    5.第4行 热门商品
+        嵌套一个2行7列的表格
+
+    6.第5行 放广告图片
+    7.第6行 最新商品
+        嵌套一个2行7列的表格
+    8.第7行 放一个图片
+    9.第8行 
+        两个段落 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>商品信息</title>
+    </head>
+    <body>
+        <table border="1" width="100%">
+            <!--第一行  一行三列-->
+            <tr>
+                <table width="100%" border="0">
+                    <td>
+                        <img src="imgs/logo2.png" />
+                    </td>
+                    <td align="center">
+                        <img src="imgs/header.jpg" />
+                    </td>
+                    <td align="right">
+                        <a href="#">登录</a>
+                        <a href="#">注册</a>
+                        <a href="#">购物车</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+
+                </table>
+            </tr>
+
+            <!-- 第二行  导航-->
+            <tr height="45" bgcolor="aqua">
+            <tr>
+                <table bgcolor="dodgerblue" width="100%">
+                    <tr>
+                        <td>
+                            <a>
+                                &nbsp;&nbsp;
+                                <font color="white" size="4">首页</font>&nbsp;&nbsp;
+                                <font color="white" size="4">首页</font>&nbsp;&nbsp;
+                                <font color="white" size="4">首页</font>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+
+            <tr>
+                <img src="./imgs/1.jpg" />
+            </tr>
+
+            <!-- ====================热门商品====================== -->
+            <tr>
+                <td>
+                    <font size="6" face="幼圆">热门商品</font>
+                    <img src="./imgs/title2.jpg" />
+                    <!-- 嵌套一个两行七列的表格-->
+                    <table border="0" cellspacing="" cellpadding="" width="100%" align="center">
+                        <tr>
+                            <td rowspan="2"> <img src="./imgs/big01.jpg" /> </td>
+                            <td colspan="3"> <img src="./imgs/middle01.jpg" /> </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>￥200.00</p>
+                            </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>200.00</p>
+                            </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>200.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p align="center">$200.00</p>
+                            </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>200.00</p>
+                            </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>200.00</p>
+                            </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>200.00</p>
+                            </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>200.00</p>
+                            </td>
+                            <td align="center">
+                                <img src="./imgs/small08.jpg" />
+                                <p>电饭煲</p>
+                                <p>200.00</p>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <!--广告-->
+            <tr>
+                <td>
+                    <img src="./imgs/ad.jpg" width="100%" />
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr align="center">
+                <td width="80%">
+                    <table align="center">
+                        <tr>
+                            <p align="center">
+                                <font color="crimson" size="4">最新商品</font>
+                            </p>
+                        </tr>
+                        <tr>
+                            <td width="25%">
+                                <img src="./imgs/products/cs10001.jpg" width="%"/>
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+                            <td width="25%">
+                                <img src="./imgs/products/cs10004.jpg" />
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+                            <td width="25%">
+                                <img src="./imgs/products/cs20001.jpg" />
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+                            <td width="25%">
+                                <img src="./imgs/products/cs70005.png" />
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="./imgs/products/cs70005.png" />
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+                            <td>
+                                <img src="./imgs/products/cs70005.png" />
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+                            <td>
+                                <img src="./imgs/products/cs70005.png" />
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+                            <td>
+                                <img src="./imgs/products/cs70005.png" />
+                                <p align="center"> 衣服</p>
+                                <p align="center"> 200</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr></tr>
+
+            <tr align="center">
+                <td>
+                    <img src="../img/header.jpg" width="85%" height="85%" />
+                </td>
+            </tr>
+
+            <tr>
+                <table width="100%">
+                    <tr>
+                        <td bgcolor="red">
+                            <p align="center">
+                                <font face="等线" color="red	">
+                                    <a href="#">关于我们</a>
+                                </font>
+                                <a href="#">关于我们</a>&nbsp;
+                                <a href="#">关于我们</a>&nbsp;
+                                <a href="#">关于我们</a>&nbsp;
+                            </p>
+                            <p align="center">
+                                <font face="宋体" size="3" color="chartreuse">
+                                    Copyright &copy; 2005-2016 传智商城 版权所有
+                                </font>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </tr>
+
+        </table>
+    </body>
+
+</html>

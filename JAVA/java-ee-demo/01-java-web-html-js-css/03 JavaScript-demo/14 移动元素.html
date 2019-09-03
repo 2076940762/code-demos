@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .rootdiv {
+                width: 100%;
+                height: 500px;
+                text-align: center;
+                vertical-align: middle;
+                padding: 7%;
+                }
+                
+                
+            .left {
+                width: 40%;
+                float: left;
+                text-align: center;
+                vertical-align: middle;
+                
+            }
+            
+            .middle{
+                float: left;
+                width: 10%;
+                
+                text-align: center;
+                vertical-align: middle;
+                
+                /* display: table; */
+                
+                height: 500px;
+            }
+                        
+            .middle div{
+                text-align: center;
+                vertical-align: middle;
+                
+                height: 160px;
+                /* display: table-line; */
+            }
+            
+            .middle div input{
+                text-align: center;
+                vertical-align: middle;
+                
+                height: 20px;
+                width: 50px;
+                /* display: table-cell; */
+            }
+            
+            .right {
+                float: left;
+                width: 40%;
+                text-align: center;
+                vertical-align: middle;
+            }
+            
+            /* /* /* /* /* /* /* /* /* /* /* /* /* /*  */ 
+            
+            #left {
+                height: 400px;
+                width: 300px;
+                
+                font-size: xx-large;
+                line-height: 100px
+            }
+            
+            #left input {
+                height: 120px;
+            }
+            
+
+            
+            #right {
+                /* width: 40%; */
+                width: 300px;
+                height: 400px;
+                font-size: xx-large;
+                line-height: 60px;
+            }
+        </style>
+
+        <script>
+            window.onload=function (){
+                
+                //1.移动一个元素
+                window.document.getElementById("moveone").onclick=function (){
+                    var arr=window.document.getElementById("left").options;
+                    // alert(arr);
+                    for (var i=0;i<arr.length;i++) {
+                        if(arr[i].selected){
+                            window.document.getElementById("right").appendChild(arr[i]);
+                            break;
+                        }
+                    }
+                }
+                
+                //2.移动多个元素
+                window.document.getElementById("moveSelected").onclick=function(){
+                    var arr=window.document.getElementById("left").options;
+                    // alert("hello");
+                    for (var i=0;i<arr.length;i++) {
+                        if(arr[i].selected){
+                            window.document.getElementById("right").appendChild(arr[i]);
+                            i--;
+                        }
+                    }
+                }
+                
+                //3. 移动所有元素
+                window.document.getElementById("moveall").onclick=function(){
+                    var arr=window.document.getElementById("left").options;
+                    for (var i=0;i<arr.length;i++) {
+                        // if(arr[i].selected)
+                        {
+                            window.document.getElementById("right").appendChild(arr[i]);
+                            i--;
+                        }
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="rootdiv">
+
+            <div class="left">
+                <select multiple="multiple" id="left">
+                    <option>朝辞白帝彩云间</option>
+                    <option>千里江陵一日还</option>
+                    <option>两岸猿声啼不尽</option>
+                    <option>轻舟已过万重山</option>
+                </select>
+            </div>
+
+            <div class="middle">
+                <div>
+                    <input type="button" value=">" id="moveone" />
+                </div>
+
+                <div>
+                    <input type="button" value=">>" id="moveSelected" />
+                </div>
+
+                <div>
+                    <input type="button" value=">>>" id="moveall"/>
+                </div>
+            </div>
+
+            <div class="right">
+                
+                <select id="right" multiple="multiple"></select>
+                
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <script>
+        var person = new Object();
+        person.firstname = "John";
+        person.lastname = "Doe";
+        person.age = 50;
+        person.eyecolor = "blue";
+
+        person.showName = function () {
+            alert(this.firstname + this.lastname);
+        };
+
+        document.write(person.firstname + " is " + person.age + " years old.");
+
+        person.showName();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+css:渲染
+	层叠样式表
+	作用:
+		渲染页面
+		提高工作效率
+	格式:
+		选择器{属性:值;属性1:值1;}
+	后缀名:
+		.css 独立的css(样式)文件
+	和html元素的整合★
+		方式1:内联样式表 通过标签的style属性设置样式
+		方式2:内部样式表 在当前页面中使用的样式
+			通过head标签的style子标签导入
+			例如:
+				<style>
+					#divId2{
+						background-color: #0f0;
+					}
+				</style>
+				
+		方式3:外部样式表 有独立的css文件
+			通过head标签的link子标签导入
+			例如:
+				<link rel="stylesheet" href="css/1.css" type="text/css"/> 
+ -->
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            #a1234 {
+                background: burlywood;
+                color: red;
+                font: "微软雅黑";
+                size: 4cm;
+            }
+        </style>
+        
+        <!-- 导入外部css样式 -->
+        <link rel="stylesheet" href="css/css1.css" type="text/css" />
+    </head>
+
+    <body>
+        <!--内联样式        -->
+        <div style="background-color: black;font-size: large;font-family: '微软雅黑';color: #00FFFF;"> hello world</div>
+        <div style="background-color: black;size: 10cm;color:white;font:'times new roman';">hello world - -内联样式 </div>
+
+        <!-- 内部样式表-->
+        <div id="a1234">
+            一生一代一双人，争教两处销魂。 　　相思相望不相亲，天为谁春。 　　浆向蓝桥易乞，药成碧海难奔。 　若容相访饮牛津，相对忘贫。
+        </div>
+
+        <div id="id002">
+            别岸扁舟三两只⑵。葭苇萧萧风淅淅⑶。沙汀宿雁破烟飞⑷，溪桥残月和霜白⑸。渐渐分曙色。路遥山远多行役⑹。往来人，只轮双桨⑺，尽是利名客⑻。
+            一望乡关烟水隔⑼。转觉归心生羽翼⑽。愁云恨雨两牵萦⑾，新春残腊相催逼⑿。岁华都瞬息⒀。浪萍风梗诚何益⒁。归去来⒂，玉楼深处，有个人相忆。
+        </div>
+    </body>
+
+</html>

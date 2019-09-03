@@ -1,0 +1,1 @@
+i=    1 ; f=3.1 ;str=hello 

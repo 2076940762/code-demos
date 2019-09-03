@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表单</title>
+    </head>
+    <!--
+    表单标签：
+    	需要提交的表单需要使用<form></form>括起来
+    	action：提交路径
+    	method：提交方式
+    文本框:
+    	<input type=”text”/>
+            name
+            value
+            size
+            maxlength
+            readonly
+    密码框：
+    	<input type=”password”/>
+    单选按钮：
+    	<input type=”radio”/>
+    	Checked：默认选中
+    复选框
+    	<input type=”checkbox”/>
+    	Checked：默认选中
+    下拉列表框
+    	<select>
+            <option></option>
+        </select>
+    	Selected：默认选中
+    	Multiple：全部显示
+    文件上传项
+    	<input type=”file” name=”file”/>
+    文本区
+    	<textarea name=”” cols=”” rows=””></textarea>
+    提交按钮
+    	<input type=”submit” value=”注册”>
+    重置按钮
+    	<input type=”reset” value=”重置”>
+    普通按钮
+    	<input type=”button” value=”普通按钮”>
+    隐藏字段
+    	<input type=”hidden” name=”id”/>
+    
+    提交方式：
+    	GET	：默认值
+    	提交的数据都会在地址栏中进行显示
+    	提交的数据的时候是有大小的限制
+    	POST	：
+    	提交的数据不会再地址栏中进行显示
+    	提交的数据没有大小限制
+    
+    -->
+
+    <body>
+        <!--<form action="" method="post">-->
+        <form action="" method="get">
+            姓名:<input name="username" type="text" value="默认值" /> <br />
+            密码:<input type="password" name="passwd" value="默认值" /> <br />
+            <!-- 不显示密码明文-->
+            性别:
+                <input type="radio" name="sex" value="男" checked="checked"> 男</input>
+                <input type="radio" name="sex" value="女" >女</input>
+                <br /> 
+            爱好：
+                <input type="checkbox" name="hobby" value="eat"/>吃
+                <input type="checkbox" checked="checked" name="hobby" value="drink"/>喝
+                <input type="checkbox" name="hobby" value="sleep"/>睡
+                <input type="checkbox" name="hobby" value="paly"/>玩
+                <br />  
+            头像： <input type="file" name="photo"/>             <br /> 
+            籍贯：
+                <select name="province">
+                    <option selected="selected" value="shanxi">山西</option>
+                    <option value="shaanxi">陕西</option>
+                    <option value="henan">河南</option>
+                    <option value="jiangsu">江苏</option>
+                </select>
+
+                <select name="city">
+                    <option value="宝鸡" selected="selected">宝鸡</option>
+                    <option value="西安">西安</option>
+                </select>
+                <br />
+            自我介绍：
+                <textarea rows="20" cols="80">very good</textarea>
+                <br />
+
+            <input type="submit" />
+            <input type="reset" />
+            <input type="button" name="" id="" value="保存" />
+            
+        </form>
+    </body>
+
+
+</html>

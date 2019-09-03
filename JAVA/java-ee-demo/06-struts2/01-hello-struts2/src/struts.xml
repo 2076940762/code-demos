@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<!-- 开启动态方法访问 -->
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="true" />
+
+
+	<!-- 包结构 -->
+	<package name="demo1" namespace="/" extends="struts-default">
+
+		<!-- 配置Action -->
+		<action name="hello" class="hellostruts2.Hello"
+			method="sayHello">
+			<!-- 配置跳转的页面，路径的写法：在Struts2框架中，不管是转发还是重定向，都不用写项目名 -->
+			<result name="ok">/welcome.jsp</result>
+		</action>
+
+		<!-- POJO -->
+		<action name="hellopojo" class="pojo.HelloPojo"></action>
+
+		<!-- 实现Action接口 -->
+		<action name="implaction" class="ImplementAction.MyAction">
+			<result name="success">/welcome.jsp</result>
+		</action>
+
+		<!-- 继承actionsupport 类 -->
+		<action name="actionsupport"
+			class="extendsactionsupport.MyActionSupport"></action>
+
+	</package>
+
+	<!-- 传统方式 -->
+	<package name="customer" namespace="/" extends="struts-default">
+		<action name="saveCustomer" class="actions.Customer"
+			method="save">
+			<result name="saveOK">/welcome.jsp</result>
+		</action>
+		<action name="deleteCustomer" class="actions.Customer"
+			method="delete">
+			<result name="deleteOK">/welcome.jsp</result>
+		</action>
+
+	</package>
+
+	<!-- 通配符方式 -->
+	<package name="contact" namespace="/" extends="struts-default">
+		<action name="contact_*" class="actions.Contact" method="{1}">
+			<result name="saveOK">/welcome.jsp</result>
+			<result name="updateOK">/welcome.jsp</result>
+		</action>
+
+	</package>
+
+	<!-- 动态方式 -->
+	<package name="dynamic" namespace="/" extends="struts-default">
+		<action name="contact" class="actions.Contact">
+			<result name="saveOK">/welcome.jsp</result>
+			<result name="updateOK">/welcome.jsp</result>
+		</action>
+	</package>
+
+
+</struts>
+

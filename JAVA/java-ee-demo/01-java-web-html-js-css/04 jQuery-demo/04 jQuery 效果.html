@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script>
+    //        jquery中效果:
+    // 隐藏或展示
+    // 	show(毫秒数) hide(毫秒数)
+    $(function() {
+      $("#id1").click(function() {
+        // $("#img1").hide(1000);
+        // $("#img1").show(1000);
+        $("#img1").toggle();
+      });
+    });
+
+    // 滑入或滑出
+    // 	slideDown(毫秒数):向下滑入
+    // 	slideUp(毫秒数):向上滑出
+    $(function() {
+      $("#id2").click(function() {
+        // $("#img2").slideUp();
+        // $("#img2").slideDown();
+        $("#img2").slideToggle();
+      });
+    });
+
+    // 淡入或淡出
+    // 	fadeIn(int):淡入
+    // 	fadeOut(int):淡出
+    $(function() {
+      $("#id3").click(function() {
+        // $("#img3").fadeOut(4000);
+        // $("#img3").fadeIn(4000);
+        $("#img3").fadeToggle();
+      });
+    });
+  </script>
+  <style>
+    .buttons {
+      width: 85%;
+      height: 50px;
+    }
+
+    .imgs {
+      height: 500px;
+      width: 1000px;
+    }
+  </style>
+
+  <body>
+    <table width="100%" align="center">
+      <tr align="center">
+
+        <td width="15%">
+          <input type="button" value="隐藏/显示" id="id1" class="buttons" />
+        </td>
+
+        <td width="75%">
+          <img src="img/03.jpg" id="img1" class="imgs" />
+        </td>
+
+      </tr>
+
+      <tr align="center">
+        <td>
+          <input type="button" value="滑入或滑出" id="id2" class="buttons" />
+        </td>
+        <td>
+          <img src="img/01.jpg" id="img2" class="imgs" />
+        </td>
+      </tr>
+
+      <tr align="center">
+        <td>
+          <input type="button" value="淡入或淡出" id="id3" class="buttons" />
+        </td>
+        <td>
+          <img src="img/02.jpg" id="img3" class="imgs" />
+        </td>
+      </tr>
+      
+    </table>
+  </body>
+</html>

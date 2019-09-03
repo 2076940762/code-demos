@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <p>
+            1. 代码结构上, 通常二者均包含在form标签内, 但datalist上方需要关联input输入框, select则不需要; select的option标签是成对出现的, 且待选值夹在标签对中,
+            datalist则是直接使用自闭合的option标签, option value直接指定待选值, 另外, select中option标签可以添加属性selected表示默认选中, datalist不具备这个特性;
+
+            2. 实际功能上, datalist可谓更强大, 可以看作是输入框和下拉框的结合体, 可以在框内输入字符(输入时下拉框具备联想筛选功能), 也可以直接从下拉框中选择预设选项, 使用很方便, 用户体验也更棒 ……
+        </p>
+
+        <form>
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <input type="submit">
+        </form>
+
+    </body>
+</html>

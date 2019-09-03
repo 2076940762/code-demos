@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- 
+        注意:
+            bootstrap将每一行分成12份
+        媒体查询:
+            假如大屏幕,每行显示6个
+                超大电脑,屏幕分辨率>1200		使用: col-lg-2
+                
+            假如屏幕小点,每行显示4个
+                992<屏幕分辨率<1200			使用: col-md-3
+                    
+            再小点,每行显示2个
+                768<屏幕分辨率<992			使用: col-sm-6
+            
+            继续小,每行显示1个	
+                屏幕分辨率<768				使用:col-xs-12 -->
+
+    </head>
+    <body>
+        <p > 普通的div</p>
+        <div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+
+            <div style="border: 1px  #007BFF solid;">1</div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+            <div style="border: 1px  rgb(16, 214, 198) solid;">1</div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+
+            <div style="border: 1px  #007BFF solid;">1</div>
+            <div style="border: 1px  rgb(136, 218, 44) solid;">1</div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+            <div style="border: 1px  #007BFF solid;">1</div>
+
+        </div>
+        
+        <hr/>
+        <h1>
+            bootstrap响应式界面
+        </h1>
+
+        <div class="container-fluid">
+            <div style="border:  rgba(176, 212, 15, 0.856) solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+            <div style="border:  red solid " class="col-lg-1 col-md-2 col-sm-4 col-xs-6">2</div>
+
+        </div>
+    </body>
+</html>

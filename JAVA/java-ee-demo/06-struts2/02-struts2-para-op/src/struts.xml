@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="servletapi" namespace="/"
+		extends="struts-default">
+
+		<!-- 全局结果页面 -->
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+
+		<!-- 完全解耦合的方式 -->
+		<action name="login" class="servletapi.LogIn1">
+			<result name="success">/login_success.jsp</result>
+		</action>
+
+		<!-- 原生API的方式 -->
+		<action name="login2" class="servletapi.login2">
+			<result name="success">/login_success.jsp</result>
+		</action>
+
+
+		<!-- chain 转发到 action -->
+		<!-- dispatcher 转发到 jsp -->
+
+		<!-- redirect 重定向到jsp -->
+		<!-- redirectAction 重定向到action -->
+
+		<action name="save" class="servletapi.Customer" method="save">
+			<result name="success" type="redirectAction">findAll</result>
+		</action>
+
+
+		<action name="findAll" class="servletapi.Customer"
+			method="findAll">
+
+		</action>
+
+	</package>
+
+
+	<package name="paras" namespace="/" extends="struts-default">
+		<!-- 属性驱动的数据封装方式一 -->
+		<action name="AttrAction" class="deal.para.AttrAction"></action>
+		<action name="javaBeanAction" class="deal.para.javaBeanAction"></action>
+
+		<!-- 模型驱动的数据封装方式 -->
+		<action name="modelAction" class="deal.para.ModelDeriveAction"></action>
+
+		<!-- 将数据封装到集合中 -->
+		<action name="listAction" class="deal.para.ListAction"></action>
+
+		<!-- 将数据封装到map中 -->
+		<action name="mapAction" class="deal.para.mapAction">
+
+		</action>
+	</package>
+
+
+
+	<!-- 拦截器 -->
+	<package name="interceptor" namespace="/"
+		extends="struts-default">
+
+		<interceptors>
+			<interceptor name="myInterceptor1"
+				class="interceptors.MyInterceptor"></interceptor>
+		</interceptors>
+
+		<action name="myAction" class="interceptors.MyAction">
+			<interceptor-ref name="myInterceptor1"></interceptor-ref> <!-- 自定义拦截器 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>  <!-- 调用默认的拦截器栈 -->
+		</action>
+	</package>
+
+	<!-- ValueStack -->
+	<package name="vs" namespace="/"  extends="struts-default">
+		<action name="vsdemo1" class="valuestack.MyValueStack" method="execute">
+			<result name="success">/value-stack.jsp</result>
+		</action>
+		<action name="foreach" class="valuestack.MyValueStack" method="foreach">
+			<result name="success">/value-stack.jsp</result>
+		</action>
+	</package>
+
+</struts>

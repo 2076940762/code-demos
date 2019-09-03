@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<!--
+		bom(浏览器对象模型)总结
+	所有的浏览器都有5个对象
+		window:窗口
+		location:定位信息 (地址栏)
+		history:历史
+window对象详解:
+	如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，
+	并为每个框架创建一个额外的 window 对象。
+	常用的属性:
+		通过window可以获取其他的四个对象
+			window.location 等价域 location
+			window.history 等价于 history
+			...
+	常用的方法
+		消息框
+			alert("...."):警告框
+			confirm("你确定要删除吗?"):确定框 返回值:boolean
+			prompt("请输入您的姓名"):输入框 返回值:你输入的内容
+		定时器
+			设置定时器
+				setInterval(code,毫秒数):周期执行
+				setTimeout(code,毫秒数):延迟多长事件后 只执行一次.
+				例如:
+					setInterval(showAd,4000);
+					serInterval("showAd()",4000);
+			清除定时器
+				clearInterval(id):
+				clearTimeout(id):
+		打开和关闭
+			open(url):打开
+			close():关闭
+			-->
+	<script>
+		//消息框
+		//警告框
+		alert("警告框");
+
+		//确认框
+		var flag = window.confirm("确认框")
+		alert(flag);
+
+		//输入框
+		var res = window.prompt("输入框")
+		alert(res)
+	</script>
+
+	<body>
+		<input type="button" value="open" onclick="opennp()">
+
+		</input>
+	</body>
+
+	<script>
+		function opennp() {
+			window.open("04 图片轮播.html")
+		}
+	</script>
+
+</html>

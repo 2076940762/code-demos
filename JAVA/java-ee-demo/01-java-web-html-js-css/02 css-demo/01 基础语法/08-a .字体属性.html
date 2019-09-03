@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <!-- 
+        background-color:设置背景颜色
+		background-image:设置图片作为背景 url
+	尺寸:
+		width:
+		height:
+	浮动:
+		float: 可选值 left right
+		
+	分类:
+		clear:设置元素的两边是否有其他的浮动元素
+			值为:both 两边都不允许有浮动元素
+		display:设置是否及如何显示元素。
+			none 此元素不会被显示。 
+			block 此元素将显示为块级元素，此元素前后会带有换行符。 
+			inline 默认。此元素会被显示为内联元素，元素前后没有换行符。
+         -->
+        <style>
+            #div0 {
+                font-family: "黑体";
+            }
+
+            #div1 {
+                font-size: 1cm;
+            }
+
+            #div2 {
+                font-style: italic;
+            }
+
+            #div3 {
+                font-family: "黑体";
+                font-size: 1cm;
+                font-style: italic;
+
+                text-decoration: underline;
+            }
+
+            div {
+                color: #FF00FF;
+                line-height: 1.25cm;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>天佑中华</div>
+        <div id="div0">天佑中华</div>
+        <div id="div1">天佑中华</div>
+        <div id="div2">天佑中华</div>
+        <div id="div3">天佑中华</div>
+
+        <a href="#"  >
+            去掉超链接自带下划线
+        </a>
+    </body>
+</html>

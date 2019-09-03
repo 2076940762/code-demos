@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script>
+            // 页面加载:
+            //     js:
+            //     window.onload = function() {} //在一个页面中只能使用一次
+            // jquery 在一个页面中可以使用多次
+            // 方式1:
+            //     $(function() { ...
+            //     })
+            // 方式2:
+            //     $(document).ready(function() {});
+            
+            $(document).ready(function() {
+                alert("hello");
+            })
+
+            $(document).ready(function() {
+                alert("123654");
+            })
+            
+            $(function(){
+                alert("jQuery");
+            })
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <!-- 
+         	浮动:
+		float: 可选值 left right
+		
+	分类:
+		clear:设置元素的两边是否有其他的浮动元素
+			值为:both 两边都不允许有浮动元素
+		display:设置是否及如何显示元素。
+			none 此元素不会被显示。 
+			block 此元素将显示为块级元素，此元素前后会带有换行符。 
+			inline 默认。此元素会被显示为内联元素，元素前后没有换行符。
+         -->
+		<style>
+			div{
+				background-color: #ff0;
+				border: 1px dashed red;
+				height: 50px;
+				width: 50px;
+			}
+			#div0{
+				display: none;
+			}
+			
+			#span0{
+				display: block;
+			}
+			
+			h1{
+				display: inline;
+			}
+		</style>
+	</head>
+	<body>
+		<div >1</div>
+		<div id="div0">2</div>
+		<div >3</div>
+		<div >4。</div>
+        
+		<span>愁似鳏鱼知夜永</span>
+		<span id="span0">懒同蝴蝶为春忙。</span>
+		<span>鸳鸯被里成双夜</span>
+		<hr />
+		<h1>苍苍白发对红妆</h1>
+        十八新娘八十郎
+	</body>
+</html>

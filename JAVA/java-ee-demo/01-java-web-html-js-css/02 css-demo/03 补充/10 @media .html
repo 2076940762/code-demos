@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>菜鸟教程(runoob.com)</title>
+        <style>
+            @media screen {
+                p.test {
+                    font-family: verdana, sans-serif;
+                    font-size: 14px;
+                }
+            }
+
+            @media print {
+                p.test {
+                    font-family: times, serif;
+                    font-size: 10px;
+                }
+            }
+
+            @media screen,
+            print {
+                p.test {
+                    font-weight: bold;
+                }
+            }
+        </style>
+    </head>
+
+    <p>
+        @media 规则允许在相同样式表为不同媒体设置不同的样式。
+
+        在下面的例子告诉我们浏览器屏幕上显示一个 14 像素的 Verdana 字体样式。但是如果页面打印，将是 10 个像素的 Times 字体。请注意，font-weight 在屏幕上和纸上设置为粗体：
+    </p>
+
+    <body>
+        <p class="test">菜鸟教程 -- 学的不仅是技术，更是梦想！！！</p>
+    </body>
+</html>

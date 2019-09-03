@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+			//案例3-轮播图片
+			//需求:
+			//	每隔3秒图片更新一下
+			//技术分析:
+			//	bom中window对象的定时器方法
+			//定时器:
+			//	var id=setInterVal(code,毫秒数):每隔指定的毫秒数执行一次函数 周期
+			//	var id=setTimeout(code,毫秒数):延迟指定的毫秒数之后 只执行一次函数
+			//	
+			//	清除定时器:
+			//		clearInterval(id);
+			//		claerTimeout(id);
+			//String对象
+			//	原始类型的String是一个为对象可以直接调用String类对象的方法
+			//	substring(0,endIndex);
+			
+			var imgObj;
+
+			function init() {
+//				alert("hello");
+				setInterval(showPictures, 700);
+				imgObj=document.getElementById("id-img-1");
+			}
+
+			var j = 0;
+
+			function showPictures() {
+				var files = [
+					"1.jpg",
+					"2.jpg",
+					"3.jpg",
+					"4.jpg",
+					"5.jpg",
+					"5.png",
+					"6.jpg",
+					"7.png"
+				];
+				
+				imgObj.src="img/"+files[j++];
+				
+				if(j==files.length)
+				{
+					j=0;
+				}
+
+				//				for(var i = 0; i < files.length; i++) {
+				//					alert(files[i]);
+				//				}
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+		<div>
+			<img src="" id="id-img-1"/>
+		</div>
+	</body>
+
+</html>

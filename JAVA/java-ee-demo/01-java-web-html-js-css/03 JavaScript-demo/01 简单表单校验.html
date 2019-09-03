@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+			function checkForm() {
+				//获取用户名
+				var usrnameobj = document.getElementById("id-usrname");
+				var usrname = usrnameobj.value;
+				if(usrname == null || usrname == "") {
+					alert("用户名不能为空");
+				}
+
+				//获取邮箱
+				var emailAddress = document.getElementById("id-email").value;
+				if(emailAddress == null || emailAddress == "") {
+					alert("邮件地址不能为空");
+				}
+
+				//获取密码
+				var passwd1 = document.getElementById("id-passwd1").value;
+				var passwd2 = document.getElementById("id-passwd2").value;
+
+				if(passwd1 == null || passwd2 == null || passwd1 == "" || passwd2 == "") {
+					alert("密码不能为空");
+				}
+
+				alert(passwd1);
+				alert(passwd2);
+
+				if(!passwd1.equals(passwd2)) {
+					alert("两次输入密码不一致");
+				}
+
+				if(passwd1 != passwd2) {
+					alert("两次输入密码不一致");
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<form method="get" onsubmit="return checkForm()">
+			<table border="0" cellspacing="" cellpadding="" align="center" bgcolor="white">
+				<tr>
+					<td>用户名:&nbsp;&nbsp;</td>
+					<td align="left" colspan="2">
+						<input type="text" name="name" width="100%" id="id-usrname" />
+					</td>
+				</tr>
+
+				<!--<tr>
+					<td>
+						头像：
+					</td>
+					<td colspan="2">
+						<input type="file" name="" id="" value="" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>性别：</td>
+					<td>
+						<input type="radio" name="sex" value="M" checked="checked" /> 男
+					</td>
+					<td>
+						<input type="radio" name="sex" value="F" /> 女
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						出生年月：
+					</td>
+					<td colspan="2">
+						<input type="date" name="birthday" id="birthday" value="" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>籍贯</td>
+					<td>
+						<select name="province">
+							<option selected="selected" value="陕西"> 陕西 </option>
+							<option value="河南"> 河南 </option>
+						</select>
+					</td>
+					<td>
+						<select name="city">
+							<option value="郑州">郑州 </option>
+							<option selected="selected" value="西安">西安 </option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td> 兴趣爱好：</td>
+					<td colspan="2">
+						<input type="checkbox" name="hobby" value="吃" /> 吃
+						<input type="checkbox" name="hobby" value="sleep" /> 睡
+						<input type="checkbox" name="hobby" value="debuging" /> 调代码
+					</td>
+				</tr>-->
+
+				<tr>
+					<td>
+						邮箱:&nbsp;
+					</td>
+
+					<td colspan="2">
+						<input type="text" name="email" id="id-email" />
+					</td>
+				</tr>
+
+				<!--<tr>
+					<td>电话：</td>
+					<td colspan="2"> <input type="text" name="tel" /> </td>
+				</tr>
+
+				<tr>
+					<td>
+						验证码：
+					</td>
+					<td colspan="2">
+						<input type="text" name="verification" />
+					</td>
+				</tr>-->
+
+				<tr>
+					<td>
+						密码：
+					</td>
+					<td colspan="2">
+						<input type="password" name="pass" id="id-passwd1" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						请确认密码：
+					</td>
+					<td colspan="2">
+						<input type="password" id="id-passwd2" />
+					</td>
+				</tr>
+
+				<tr align="left">
+					<td colspan="3" align="center"> <input type="submit" /> </td>
+					<!--<td> <input type="reset" /> </td>
+					<td> <input type="button" value="保存" /> </td>-->
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

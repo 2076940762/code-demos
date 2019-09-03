@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+      // 属性选择器:
+      // [属性]
+      // [属性=值]
+
+      // 	属性和css
+      // attr():设置或者获取属性(1.6版本之前)
+      // 	attr("属性名"):获取
+      // 	attr("属性名","值"):设置一个
+      // 	attr({
+      // 		"属性名":"值",
+      // 		"属性名":"值"
+      // 	})
+      //
+      // prop():和attr用法一致(1.6版本之后)
+      //
+      // (了解)addClass("存在的样式")
+      //
+      // removeAttr()
+      // (了解)removeClass()
+      //
+      // css():设置获取获取元素的样式
+      // 	css("属性"):获取
+      // 	css("属性","值"):设置
+      // 	css({
+      // 		"":"",
+      // 		"":"",
+      // 		"":""
+      // 	}):设置多个
+      //
+      // width()
+      // height()
+
+      $(document).ready(function() {
+        //1.1给username添加title属性
+        $("[name='username']").attr("title", "姓名");
+
+        //1.2获取username的title属性
+        alert($("[name=username]").attr("title"));
+
+        //1.3给username添加value和class属性
+        $("[name=username]").attr({
+          value: "猜猜我是谁",
+          class: "textClass"
+        });
+
+        //1.4删除username的class属性
+        $("[name='username']").removeAttr("class");
+
+        //2.1给username添加一个名为textClass的样式
+        $("[name='username']").addClass("textClass");
+
+        //2.2删除username的名为textClass的样式
+        $("[name='username']").removeClass("textClass");
+
+        //4.1 给div添加边框样式
+        $("div").css({
+          border: "red solid 1px"
+        });
+
+        //4.2 获取div的表框样式
+        var v1 = $("div").css("border");
+        alert(v1);
+
+        //4.3 给div添加多种样式
+        $("div").css({
+          width: "100%",
+          height: "40px",
+          "text-align": "center",
+          "background-color": "#Fa5"
+        });
+
+        //5 获取div的位置
+        alert($("div").position().left);
+
+        //6 获取div的高和宽
+      });
+    </script>
+    <style type="text/css">
+      .textClass {
+        background-color: #ff0;
+      }
+	  
+    </style>
+  </head>
+  <body>
+
+	<h3>表单</h3>
+	
+    <form action="">
+      <table border="1">
+        <tr id="tr1">
+          <td>
+            <label>姓名</label>
+          </td>
+          <td>
+            <input type="text" name="username" />
+          </td>
+        </tr>
+
+        <tr>
+          <td><span>密码</span></td>
+          <td><input type="password" name="password" /></td>
+        </tr>
+
+        <tr>
+          <td>性别</td>
+          <td>
+            <input type="radio" name="gender" value="男" />男
+            <input type="radio" name="gender" value="女" />女
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <button type="button">普通按钮</button>
+            <input type="submit" value="提交按钮" />
+            <input type="reset" value="重置按钮" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <h3>公告信息</h3>
+    <div>
+      未满18慎进
+    </div>
+    <span id="sp">外span<a href="#">内超链</a></span>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    
+    <body>
+        <div>
+            <select id="province" onchange="showCities(this.value)">
+                <option>--请选择--</option>
+                <option value="0">陕西</option>
+                <option value="1"> 河南</option>
+            </select>
+
+            <select id="city">
+                <option>--请选择--</option>
+            </select>
+        </div>
+    </body>
+</html>
+<script>
+    var arr = new Array(2);
+    arr[0] = new Array("西安", "宝鸡");
+    arr[1] = new Array("郑州", "南阳");
+
+    function showCities(i) {
+        cityObj = document.getElementById("city");
+        cityObj.innerHTML = "<option>--请选择--</option>";
+        var cities = arr[i];
+        for (var i = 0; i < cities.length; i++) {
+            // alert(cities[i]);
+            cityObj.innerHTML += "<option>" + cities[i] + "</option>";
+        }
+    }
+</script>

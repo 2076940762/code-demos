@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="js/jquery-2.1.0.js"></script>
+    <script>
+      $(function() {
+
+        //内部插入
+        $("ul").append("<li>延安</li>");
+        $("ul").prepend("<li>铜川</li>");
+
+        //外部插入
+        $("ul").before("<a href='#'>before</a>");
+        $("ul").after("<a href='#'>after</a>");
+
+        //清空
+        // $("ul").empty ();
+
+        //移除元素
+        $("#bj").remove();
+
+      });
+    </script>
+  </head>
+  <body>
+
+    <ul>
+      <Li>西安</Li>
+      <li id="bj">宝鸡</li>
+      <li>铜川</li>
+    </ul>
+    
+  </body>
+</html>

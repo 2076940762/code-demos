@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>
+
+        </title>
+
+    </head>
+    <script>
+        var i = 0;
+        onload = function() {
+            timerOj = window.setInterval(showAD, 4000);
+            if (i == 3) {
+                window.clearInterval(timerOj);
+                return;
+            }
+        }
+
+        function showAD() {
+            i++;
+            var divObj = document.getElementById("ad0");
+            divObj.style.display = "block"
+
+            window.setTimeout(hideAd, 2000);
+        }
+
+        function hideAd() {
+            var divObj = document.getElementById("ad0");
+            divObj.style.display = "none"
+        }
+    </script>
+
+    <body>
+        <div id="ad0" style="display: none;">
+            <img src="img/ad1.png" width="100%" />
+        </div>
+    </body>
+
+</html>

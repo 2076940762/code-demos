@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>frameset</title>
+	</head>
+    
+    <!-- 
+    框架(了解)
+    frameset:定义框架集
+        常用属性:
+            cols:
+            rows:
+        常见的子标签:
+            frame
+    frame:具体展示
+        常用属性:
+            src:展示网页的url
+            name:给当前的frame起个名称
+    -->
+    
+	<frameset rows="10%,82%,8%">
+		<frame src="head.html" />
+		<frameset cols="12%,*">
+			<frame src="left.html" />
+			<frame name="main" />
+		</frameset>
+		<frame />
+	</frameset>
+</html>

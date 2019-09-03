@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <script>
+        
+        function person(firstname, lastname, age, eyecolor) {
+
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.age = age;
+            this.eyecolor = eyecolor;
+            this.changeName = changeName;
+
+            function changeName(name) {
+                this.lastname = name;
+            }
+
+        }
+
+        mySon = new person("Sally", "Rally", 48, "green");
+        mySon.changeName("Doe");
+
+        document.write(mySon.lastname);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+
+    <script>
+        var divObj1;
+        var i = 0;
+
+        function initBody() {
+            divObj1 = document.getElementById("id-div-1");
+            setInterval(show, 200);
+        }
+
+        function show() {
+            var str = "身向云山那畔行。北风吹断马嘶声。深秋远塞若为情。\n 一抹晚烟荒戍垒，半竿斜日旧关城。古今幽恨几时平。";
+            divObj1.innerHTML = str.substring(0, ++i);
+            if (i == str.length) {
+                i = 0;
+            }
+        }
+    </script>
+
+    <body onload="initBody()">
+        <div id="id-div-1">
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				float: left;
+				
+				border: 5px;
+				border: solid;
+				border-color: #00FF00;
+				
+				padding: 10px;
+				margin: 20px;	
+                                            
+				background-color: #5599FF;
+			}
+			
+			#id1 {
+				font-family: "等线";
+				color: red;
+				font-size: small;
+			}
+			
+			#id2 {
+				font-family: "隶书";
+				color:#FFFF00;
+				font-size: larger;
+			}
+			
+			#id3{
+				font-family: "微软雅黑";
+				font-size: x-large;
+				color: #000000;
+			}
+		</style>
+	</head>
+    <!-- 
+     框模型:(理解)
+	一个元素外面有padding(内边距) border(边框) margin(外边距)
+		padding:元素和边框的距离
+		margin:元素最外层的空白
+	上面这三个属性都有简写的属性
+		若设置大小的时候 四个值:顺序 上右下左
+			padding:10px 10px 10px 10px
+			若只写一个的话 代表四个边使用同一个值  padding:10px
+			若只写两个个的话 代表四个边使用同一个值 padding:10px 20px
+			若只写三个个的话 代表四个边使用同一个值 padding:10px 20px 30px
+	border(边框)
+		还可以设置颜色 风格
+		简写属性:
+			border:宽度	风格 颜色;
+
+			border:5px solid red;
+			
+			solid:实线
+			dashed:虚线
+			double:双实线
+     -->
+
+	<body>
+		<div id="id1">
+			但曾相见便相知，相见何如不见时。
+		</div>
+
+		<div id="id2">
+			安得与君相决绝，免教生死作相思。
+		</div>
+		
+		<img src="../img/边框.png" />
+
+		<div id="id3">
+			青玉案 元夕</br> [宋] 辛弃疾 </br>东风夜放花千树， 更吹落，星如雨。 宝马雕车香满路。 凤箫声动，玉壶光转， 一夜鱼龙舞。</br> 蛾儿雪柳黄金缕， 笑语盈盈暗香去。 众里寻他千百度， 蓦然回首，那人却在， 灯火阑珊处。
+		</div>
+	</body>
+
+</html>
