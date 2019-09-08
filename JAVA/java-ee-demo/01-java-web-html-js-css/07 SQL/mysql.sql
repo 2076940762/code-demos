@@ -1805,3 +1805,26 @@ SHOW VARIABLES LIKE 'general%';
 SHOW VARIABLES LIKE 'general_log';
 SET GLOBAL general_log='OFF';
 
+
+CREATE DATABASE spring;
+USE spring;
+CREATE TABLE t_account(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	NAME VARCHAR(20),
+	money DOUBLE
+);
+
+DROP DATABASE spring_day03;	
+
+INSERT INTO t_account VALUES(NULL,"张三","10000")
+
+
+
+
+
+
+
+
+
+
+

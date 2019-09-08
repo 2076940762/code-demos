@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="service1" class="spring.ioc.ServiceImpl"></bean>
+
+	<!-- 依赖注入 -->
+	<bean id="customerDao"
+		class="spring.DependencyInjection.CustomerDaoImpl" />
+	<bean id="customerService"
+		class="spring.DependencyInjection.CustomerServiceImpl">
+		<property name="customerDao" ref="customerDao"></property>
+	</bean>
+
+	<!-- 通过构造函数注入 -->
+	<bean id="qqCar" class="spring.DependencyInjection.Car">
+		<constructor-arg index="0" value="qq飞车"></constructor-arg>
+		<constructor-arg name="price" value="1000000"></constructor-arg>
+	</bean>
+
+	<bean id="person" class="spring.DependencyInjection.Person">
+		<constructor-arg index="0" value="张三"></constructor-arg>
+		<constructor-arg name="car" ref="qqCar"></constructor-arg>
+	</bean>
+
+
+	<!--集合注入 -->
+
+	<bean id="collections"
+		class="spring.DependencyInjection.Collectons">
+		<property name="arr">
+			<list>
+				<value>哈哈</value>
+				<value>嘿嘿</value>
+				<value>呵呵</value>
+			</list>
+		</property>
+		<property name="list">
+			<list>
+				<value>张三</value>
+				<value>李四</value>
+				<value>王麻子</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>s1</value>
+				<value>s2</value>
+				<value>s3</value>
+				<value>4</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="陕西" value="西安"></entry>
+				<entry key="河南" value="郑州"></entry>
+				<entry key="浙江" value="杭州"></entry>
+				<entry key="甘肃" value="兰州"></entry>
+			</map>
+		</property>
+		<property name="pro">
+			<props>
+				<prop key="uname">root</prop>
+				<prop key="pass">123</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
+
