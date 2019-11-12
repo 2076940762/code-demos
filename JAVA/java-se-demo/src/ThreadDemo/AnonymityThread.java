@@ -18,7 +18,6 @@ public class AnonymityThread {
 				}
 			}
 		};
-		
 		new Thread(run).start();
 		
 		new Thread( new Runnable() {
@@ -27,7 +26,6 @@ public class AnonymityThread {
 					System.out.println("[threadid = "+Thread.currentThread().getId()+"]================================");
 				}
 			}
-			
 		}
 				).start();
 		

@@ -21,7 +21,6 @@ public class ThreadPoolDemo {
 		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	private static void function1() {

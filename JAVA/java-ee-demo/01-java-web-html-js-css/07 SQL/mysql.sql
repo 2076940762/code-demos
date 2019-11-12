@@ -1850,7 +1850,7 @@ DROP TABLE base_dict;
 
 ALTER DATABASE crm CHARACTER SET utf8;
 
-
+ 
 
 
 
